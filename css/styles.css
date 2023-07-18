@@ -512,6 +512,73 @@ ol {
   max-width: 264px;
 }
 
+.footer-form-container {
+  margin-left: 80px;
+}
+
+.footer-form-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px; 
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-form-label {
+
+}
+
+.footer-input {
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: var(--white);
+}
+
+.footer-input::placeholder {
+color: var(--white);
+}
+
+.footer-form-btn {
+  min-width: 165px; 
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--iris);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:is(:hover, :focus) {
+  background-color: var(--green);
+}
+
+.footer-form-icon {
+margin-left: 16px;
+}
+
 /*!------------- MODAL ----------------*/
 
 .backdrop {
@@ -663,9 +730,6 @@ ol {
   margin-bottom: 24px;
 }
 
-.checkbox-input {
-}
-
 .checkbox-label {
   color: var(--light-slate);
   font-size: 12px;
@@ -673,8 +737,15 @@ ol {
   letter-spacing: 0.04em;
 }
 
-/*
-.checkbox-style-icon {
+.policy-link {
+  color: var(--iris, #4d5ae5);
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+}
+
+.custom-checkbox {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -682,11 +753,41 @@ ol {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;justify-content: center;
-    fill: transparent;
-}*/
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.checkbox:checked + .checkbox-label .custom-checkbox {
+  background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
+}
+
+.contacts-form-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--iris);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-btn:hover,
+.contacts-form-btn:focus {
+  background-color: var(--ocean);
+}
 
 /**------------- PORTFOLIO -------------*/
 /* Класи хедер і футер перевикористав з index.html*/
